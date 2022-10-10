@@ -9,7 +9,8 @@ html {
 	overflow-x: hidden;
 	min-height: 100vh;
 	box-sizing: border-box;
-	font-family: $font-primary;
+	font-family: var(--primary-font);
+	font-size: 16px;
 	scroll-behavior: smooth;
 
 	&.has-cursor,
@@ -30,6 +31,8 @@ body {
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
+	background-color: var(--body-color);
+	color: #fff;
 }
 
 main {
@@ -118,14 +121,26 @@ iframe {
 	transition: $duration-normal;
 	user-select: none;
 
-	&__content {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-width: 100%;
-		color: currentColor;
-		transform: translateZ(0);
+	&-primary {
+		padding: 27px 32px;
+		width: max-content;
+		font-family: var(--secondary-font);
+		font-weight: 700;
+		font-size: 14px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #fff;
+		background: var(--secondary-color);
+		border-radius: 10px;
+
+		@include hover {
+			background: #735A9C;
+		}
+
+		@include mobile {
+			padding: 16px 38px;
+			font-size: 12px;
+		}
 	}
 }
 
@@ -136,9 +151,14 @@ iframe {
 .container {
 	position: relative;
 	z-index: 1;
+	padding: 0 16px;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 100%;
+	max-width: 360px;
+
+	@include desktop {
+		max-width: 1284px;
+	}
 }
 
 .site {
@@ -147,6 +167,7 @@ iframe {
 	min-height: 100vh; // fallback
 	// stylelint-disable-next-line
 	min-height: var(--vh);
+	overflow: hidden;
 }
 
 /* stylelint-disable */

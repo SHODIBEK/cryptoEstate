@@ -17,9 +17,20 @@ $easing-out: ease-out;
 $easing-in: ease-in;
 
 // Settings
-$desktop: 1025;
+$desktop: 1024;
 $desktop-xl: 1800;
 $laptop: 1440;
 $tablet: 768;
 $mobile: 320;
 $desktop-vh: 750;
+
+:root {
+  --body-color: #000919;
+  --primary-color: #7cc59e;
+  --secondary-color: #9978cf;
+  --dark-color: #00091a;
+  --grey-color: #878d98;
+  --primary-font: -apple-system, blinkmacsystemfont, "Igra Sans", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --secondary-font: "Vela Sans";
+  --transition-normal: 0.3s ease-in-out;
+}
