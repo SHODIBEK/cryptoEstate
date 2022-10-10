@@ -215,12 +215,11 @@
     top: 20px;
     left: -30px;
     right: -30px;
-    padding: 180px 78px 70px 30px;
-    background: #fff;
-    box-shadow: 0px 20px 50px -30px rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
     opacity: 0;
     visibility: hidden;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 20px 50px -30px rgba(255, 255, 255, 0.3);
     transition: var(--transition-normal);
     z-index: 1022;
 
@@ -234,11 +233,20 @@
       top: 5px;
       left: -11px;
       right: -11px;
-      padding: 111px 11px 40px 11px;
-      border-radius: 20px;
-      overflow-x: hidden;
-      overflow-y: auto;
-      height: calc(100vh - 10px);
+      overflow: hidden;
+      height: calc(var(--vh) - 10px);
+    }
+
+    &-wrapper {
+      padding: 180px 78px 70px 30px;
+
+      @include mobile {
+        margin-top: 80px;
+        padding: 40px 11px 40px 11px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+      }
     }
 
     &-block {
@@ -261,6 +269,7 @@
 
     &-bottom {
       margin-top: 100px;
+      padding-bottom: 60px;
 
       @include mobile {
         margin-top: 25px;

@@ -34,38 +34,39 @@ header.header
 						| Обратный звонок 
 
 			nav.header__menu
-				.header__menu-top
-					.header__menu-block
-						.header__menu-menu
-							| Меню
-						.header__menu-text
-							| Paphos, Cyprus, 801020, Charalampou Mouskou Grigori Afxentiou Street, ABC Business Center, Office 504
-					.header__list
-						each object, key in data.header.menu
-							a.header__link.js-to-anchor(
-								href=object.url
-								data-link=key
-							)
-								!= object.name
-				.header__menu-bottom
-					.header__menu-block
-						a.header__menu-mail(href="mailto:info@spm.family", title="info@spm.family")
-							| info@spm.family
-						.header__menu-phone
-							| +357 12 34 1234
-							a.header__menu-callback(href=`tel: ${data.phone}`)
-								| Обратный звонок
-						.header__menu-buttons
-							each btn in data.socials
-								a.header__button(
-									href="#",
-									title!=btn.title
-									style=`--social-color: ${btn.color};`
-								)!=btn.name
-									+svg(btn.icon)
-					.header__menu-detail
-						.header__menu-info
-							| Внедрение цифровых активов в сделках по недвижимости — это безопасность, прозрачность и перевод средств без риска
-						.header__menu-button
-							a.btn.btn-primary(href="#callback")
-								| Оставить заявку
+				.header__menu-wrapper
+					.header__menu-top
+						.header__menu-block
+							.header__menu-menu
+								| Меню
+							.header__menu-text
+								| Paphos, Cyprus, 801020, Charalampou Mouskou Grigori Afxentiou Street, ABC Business Center, Office 504
+						.header__list
+							each object, key in data.header.menu
+								a.header__link.js-to-anchor(
+									href=object.url
+									data-link=key
+								)
+									!= object.name
+					.header__menu-bottom
+						.header__menu-block
+							a.header__menu-mail(href="mailto:info@spm.family", title="info@spm.family")
+								| info@spm.family
+							.header__menu-phone
+								| +357 12 34 1234
+								a.header__menu-callback(href=`tel: ${data.phone}`)
+									| Обратный звонок
+							.header__menu-buttons
+								each btn in data.socials
+									a.header__button(
+										href="#",
+										title!=btn.title
+										style=`--social-color: ${btn.color};`
+									)!=btn.name
+										+svg(btn.icon)
+						.header__menu-detail
+							.header__menu-info
+								| Внедрение цифровых активов в сделках по недвижимости — это безопасность, прозрачность и перевод средств без риска
+							.header__menu-button
+								a.btn.btn-primary(href="#callback")
+									| Оставить заявку
