@@ -1,0 +1,55 @@
+.privilege {
+  padding: 75px 0;
+
+  @include mobile {
+    padding: 35px 0;
+  }
+
+  &__card {
+    &--primary {
+      .privilege__card-icon {
+        background-color: rgba($color: $color-primary, $alpha: 0.1);
+      }
+    }
+
+    &--secondary {
+      .privilege__card-icon {
+        background-color: rgba($color: $color-secondary, $alpha: 0.1);
+      }
+    }
+
+    &-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      @include mobile {
+        width: 40px;
+        height: 40px;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 80%;
+        height: 50%;
+      }
+    }
+  }
+
+  &__title {
+    color: var(--dark-color);
+  }
+
+  &__subtitle {
+    color: var(--grey-color);
+  }
+}

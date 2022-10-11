@@ -74,7 +74,15 @@
 }
 
 .text-center {
-	text-align: center;
+	text-align: center!important;
+}
+
+.flex-column {
+	flex-direction: column!important;
+}
+
+.gap-0 {
+	gap: 0!important;
 }
 
 /* stylelint-disable */

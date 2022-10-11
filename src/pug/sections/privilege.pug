@@ -1,0 +1,17 @@
+section.privilege.privilege--rounded
+  .container
+    .privilege__row.section__grid
+      .privilege__col.section__col.flex-column.gap-0
+        p.subtitle
+          | SPM Crypto Estate
+        h2.title
+          | Преимущества покупки недвижимости за криптовалюту
+      .privilege__col.section__col
+        each privilege, key in data.privileges
+          .privilege__card.card.card--white(class=key == 0 ? 'privilege__card--primary' : 'privilege__card--secondary')
+            .card__header
+              .privilege__card-icon
+                +svg(privilege.icon)
+            .card__body
+              h3.privilege__title.card__title!=privilege.title
+              p.privilege__subtitle.card__subtitle!=privilege.subtitle

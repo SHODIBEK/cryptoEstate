@@ -1,18 +1,18 @@
 section.estate.estate--rounded
   .container
     .estate__row.section__grid
-      .estate__col.section__col
+      .estate__col.section__col.flex-column.gap-0
         h2.title
           | Недвижимость за криптовалюту
       .estate__col.section__col
         each estate, key in data.estates
           .estate__card.card(class=key == 0 ? 'card--primary' : 'card--secondary')
-            .estate__card-header
-              .estate__card-number(class=key == 0 ? 'text-primary' : 'text-secondary')
+            .card__header
+              .card__number(class=key == 0 ? 'text-primary' : 'text-secondary')
                 | 0#{key+1}
-            .estate__card-body
-              h3.estate__card-title!=estate.title
-              p.estate__card-subtitle!=estate.subtitle
-            .estate__card-footer
+            .card__body
+              h3.card__title!=estate.title
+              p.card__subtitle!=estate.subtitle
+            .card__footer
               each tag in estate.tags
-                .estate__card-tag.tag!=tag
+                .card__tag.tag!=tag
