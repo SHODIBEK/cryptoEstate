@@ -1,0 +1,38 @@
+footer.footer
+  .container
+    .footer__wrapper
+      .footer__top
+        .footer__block
+          .footer__title
+            | Контакты
+          .footer__logo.logo(href=data.header.links.logo)
+            span.logo__text
+              | Crypto <br> Estate
+            img.logo__image(src="./logo.png",
+              alt="logo",
+              width="50"
+              height="50"
+            )
+        .footer__block
+          .footer__col
+            .footer__text
+              | Paphos, Cyprus, 801020, Charalampou Mouskou Grigori Afxentiou Street, ABC Business Center, Office 504
+            .footer__info
+              a.footer__phone(href=`tel:${data.phone}`)
+                | +357 96 787 657
+              a.footer__callback(href=`mailto:${data.mail}`)!=data.mail
+          .footer__col.for-desktop
+            .footer__link.for-desktop
+              img(
+                src=`${baseDir}images/content/icon.png`, 
+                alt="", 
+                width="69", 
+                height="69"
+              )
+      .footer__bottom
+        a.footer__link(href="#policy")
+          | Политика конфиденциальности
+        a.footer__link(href="#cookie")
+          | Использование cookie
+        .footer__copyright.footer__link
+          | ©<span data-actual-year></span>. spm.family

@@ -1,0 +1,5 @@
+mixin picture(image, className, altText)
+  picture(class!=className)
+    source(srcset=`${baseDir}images/content/${image}.webp` type='image/webp')
+    source(srcset=`${baseDir}images/content/${image}.jpeg` type='image/jpeg')
+    img(src=`${baseDir}images/content/${image}.jpg` alt!=altText)

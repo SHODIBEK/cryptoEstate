@@ -7,7 +7,7 @@ $color-gray: #eee;
 
 // FONTS
 // stylelint-disable-next-line
-$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$font-primary: -apple-system, blinkmacsystemfont, var(--primary-font), roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
 // EASING TRANSITIONS
 $duration-normal: 0.4s;
@@ -18,6 +18,7 @@ $easing-in: ease-in;
 
 // Settings
 $desktop: 1024;
+$desktop-sm: 1284;
 $desktop-xl: 1800;
 $laptop: 1440;
 $tablet: 768;
@@ -30,7 +31,7 @@ $desktop-vh: 750;
   --secondary-color: #9978cf;
   --dark-color: #00091a;
   --grey-color: #878d98;
-  --primary-font: -apple-system, blinkmacsystemfont, "Igra Sans", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --primary-font: "Igra Sans";
   --secondary-font: "Vela Sans";
   --transition-normal: 0.3s ease-in-out;
 }

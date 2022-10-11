@@ -9,7 +9,7 @@ html {
 	overflow-x: hidden;
 	min-height: 100vh;
 	box-sizing: border-box;
-	font-family: var(--primary-font);
+	font-family: $font-primary;
 	font-size: 16px;
 	scroll-behavior: smooth;
 
@@ -39,8 +39,20 @@ main {
 	flex: 1;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+}
+
 p {
 	margin: 0;
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 }
 
 a,
@@ -122,11 +134,12 @@ iframe {
 	user-select: none;
 
 	&-primary {
-		padding: 27px 32px;
+		padding: 0 32px;
 		width: max-content;
 		font-family: var(--secondary-font);
 		font-weight: 700;
 		font-size: 14px;
+		line-height: 70px;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
 		color: #fff;
@@ -138,8 +151,9 @@ iframe {
 		}
 
 		@include mobile {
-			padding: 16px 38px;
+			padding: 0 38px;
 			font-size: 12px;
+			line-height: 46px;
 		}
 	}
 }
@@ -157,7 +171,7 @@ iframe {
 	max-width: 360px;
 
 	@include desktop {
-		max-width: 1284px;
+		max-width: 1316px;
 	}
 }
 
@@ -168,6 +182,17 @@ iframe {
 	// stylelint-disable-next-line
 	min-height: var(--vh);
 	overflow: hidden;
+}
+
+.text--bg {
+	padding: 30px;
+	background-color: rgba($color: #fff, $alpha: 0.15);
+	border-radius: 30px;
+
+	@include mobile {
+		padding: 20px;
+		border-radius: 20px;
+	}
 }
 
 /* stylelint-disable */

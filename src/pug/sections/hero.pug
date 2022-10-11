@@ -1,0 +1,23 @@
+section.hero.hero--rounded
+  .container
+    .hero__wrapper
+      h1.hero__title
+        span.text-primary
+          | Недвижимость 
+        | и ПМЖ на Кипре
+        span.hero__desc.text--bg.text-primary
+          | за криптовалюту
+      .hero__row
+        .hero__images
+          +picture('iphone', 'hero__iphone', 'Iphone')
+          img.hero__tether.bounce-animation.parallax(src="./images/content/t.svg", alt="Tether")
+          img.hero__bitcoin.bounce-animation.animation-delay-3.parallax(src="./images/content/bitcoin.svg", alt="Bitcoin")
+          img.hero__ethereum.bounce-animation.animation-delay-5.parallax(src="./images/content/ethereum.svg", alt="Ethereum")
+          img.hero__grafik(src="./images/content/grafik.png", alt="")
+        .hero__block
+          p
+            | Внедрение цифровых активов <br> в сделках по недвижимости — <br> это безопасность, прозрачность <br>и перевод средств без риска 
+          p
+            | Теперь это возможно на Кипре
+          a.btn.btn-primary(href="#callback")
+            | Оставить заявку

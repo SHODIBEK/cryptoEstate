@@ -1,0 +1,249 @@
+.hero {
+  padding-top: 249px;
+  padding-bottom: 75px;
+
+  @include mobile {
+    padding-top: 176px;
+    padding-bottom: 35px;
+  }
+
+  &--rounded {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -163px;
+      left: -90px;
+      width: 716px;
+      height: 716px;
+      background: #fff;
+      background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 52.08%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0.4;
+      filter: blur(150px);
+
+      @include mobile {
+        top: -113px;
+        left: -80px;
+        width: 316px;
+        height: 316px;
+      }
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 497px;
+      right: -384px;
+      width: 1036px;
+      height: 1036px;
+      background: rgba($color: #7CC59E, $alpha: 0.3);
+      filter: blur(150px);
+
+      @include mobile {
+        top: 525px;
+        right: -118px;
+        width: 436px;
+        height: 436px;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: 145px;
+    font-weight: 400;
+    font-size: 147px;
+    // @include css-lock(37, 147, 1023, 1284);
+    line-height: 110%;
+    color: #fff;
+    text-align: center;
+
+    @include desktop-sm {
+      font-size: 105px;
+    }
+
+    @include mobile {
+      padding-bottom: 30px;
+      font-size: 37px;
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    font-size: 64px;
+    line-height: 89%;
+
+    @include desktop-sm {
+      font-size: 50px;
+    }
+
+    @include mobile {
+      position: unset;
+      margin-top: 10px;
+      font-size: 28px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__block {
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 50px;
+    font-family: var(--secondary-font);
+
+    @include mobile {
+      padding: 0;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 150%;
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    .btn {
+      margin-top: 50px;
+      min-width: 272px;
+
+      @include mobile {
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 189px;
+      }
+    }
+  }
+
+  &__images {
+    position: relative;
+    margin-left: 110px;
+    width: max-content;
+    height: 574px;
+
+    @include desktop-sm {
+      margin-left: 20px;
+    }
+
+    @include mobile {
+      margin-left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__iphone {
+    display: block;
+    margin-top: -190px;
+    max-width: 100%;
+    width: max-content;
+
+    @include mobile {
+      width: 235px;
+      margin: 0 auto;
+    }
+  }
+
+  &__tether {
+    position: absolute;
+    top: -130px;
+    left: 0;
+    box-shadow: 0px 24px 50px rgba(80, 175, 149, 0.2);
+    border-radius: 20px;
+
+    @include mobile {
+      top: 35px;
+      left: 50px;
+      width: 39px;
+      height: 39px;
+      border-radius: 10px;
+    }
+  }
+
+  &__bitcoin {
+    position: absolute;
+    top: -60px;
+    right: -15px;
+    box-shadow: 0px 4px 50px rgba(247, 147, 26, 0.6);
+    border-radius: 30px;
+
+    @include mobile {
+      top: 70px;
+      right: 45px;
+      width: 50px;
+      height: 50px;
+      border-radius: 17px;
+    }
+  }
+
+  &__ethereum {
+    position: absolute;
+    top: 45%;
+    left: -15px;
+    box-shadow: 0px 6px 40px rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+
+    @include mobile {
+      top: 60%;
+      left: 40px;
+      width: 45px;
+      height: 45px;
+      border-radius: 11px;
+    }
+  }
+
+  &__grafik {
+    position: absolute;
+    top: 21%;
+    right: -160px;
+
+    @include mobile {
+      top: 55%;
+      right: 0;
+      width: 125px;
+      height: auto;
+    }
+  }
+}
+
+.bounce-animation {
+  animation: bounce 2.5s linear infinite;
+}
+
+.animation-delay-3 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-5 {
+  animation-delay: 1s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
