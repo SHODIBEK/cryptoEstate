@@ -1,11 +1,18 @@
 section.about
   .container
     .about__wrapper
-      p.about__subtitle
+      p.about__subtitle.text-center
         | Видео
-      h2.about__title
+      h2.about__title.text-center
         | О Crypto Estate
       .about__video
         .video
           +picture('about', 'video__image')
-          iframe.video__frame(src="", frameborder="0") 
+          iframe.js-vimeo.video__frame(
+            src="https://player.vimeo.com/video/757537299?h=eea89e9c0e&controls=0", 
+            frameborder="0",
+            allow="autoplay",
+            webkitallowfullscreen,
+            mozallowfullscreen,
+            allowfullscreen,
+          ) 

@@ -195,6 +195,107 @@ iframe {
 	}
 }
 
+.title {
+	font-family: var(--primary-font);
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 120%;
+	color: #fff;
+
+	@include desktop-sm {
+		font-size: 28px;
+	}
+
+	@include mobile {
+		margin-bottom: 40px;
+		font-size: 25px;
+		text-align: center;
+	}
+}
+
+.section {
+	&__grid {
+		display: grid;
+		grid-template-columns: 26% 1fr;
+		gap: 106px;
+	
+		@include mobile {
+			display: block;
+		}
+	}
+
+	&__col {
+		display: flex;
+		gap: 10px;
+		@include mobile {
+			overflow-x: auto;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		@include desktop {
+			gap: 30px;
+		}
+	}
+}
+
+.card {
+	padding: 30px;
+	border-radius: var(--radius-normal);
+
+	@include mobile {
+		padding: 20px;
+	}
+
+	&--primary {
+		background-color: var(--primary-color);
+		box-shadow: 0px 40px 80px -29px rgba(124, 196, 158, 0.5);
+
+		@include mobile {
+			box-shadow: none;
+		}
+
+		.tag {
+			background: rgba(90, 139, 113, 0.3);
+		}
+	}
+
+	&--secondary {
+		background-color: var(--secondary-color);
+		box-shadow: 0px 40px 80px -29px rgba(151, 124, 197, 0.5);
+
+		@include mobile {
+			box-shadow: none;
+		}
+
+		.tag {
+			background: rgba(96, 82, 121, 0.3);
+		}
+	}
+
+	&--white {
+		background-color: #fff;
+	}
+}
+
+.tag {
+	padding: 0 30px;
+	font-size: 14px;
+	line-height: 53px;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 50px;
+
+	@include mobile {
+		padding: 0 20px;
+		font-size: 12px;
+		line-height: 50px;
+	}
+}
+
 /* stylelint-disable */
 /*
 * Немедленно переместите любую анимацию в конечную точку, если пользователь установил свое устройство в положение "prefers reduced motion".

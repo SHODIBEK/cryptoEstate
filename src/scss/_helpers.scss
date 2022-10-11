@@ -66,7 +66,15 @@
 }
 
 .text-primary {
-	color: var(--primary-color);
+	color: var(--primary-color)!important;
+}
+
+.text-secondary {
+	color: var(--secondary-color)!important;
+}
+
+.text-center {
+	text-align: center;
 }
 
 /* stylelint-disable */

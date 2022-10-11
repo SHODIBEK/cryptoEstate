@@ -1,5 +1,5 @@
 // stylelint-disable scss/dollar-variable-empty-line-before
-
+@import "mixins";
 // COLORS
 $color-black: #000;
 $color-white: #fff;
@@ -33,5 +33,13 @@ $desktop-vh: 750;
   --grey-color: #878d98;
   --primary-font: "Igra Sans";
   --secondary-font: "Vela Sans";
+  --radius-big: 50px;
+  --radius-normal: 30px;
   --transition-normal: 0.3s ease-in-out;
+}
+
+@include mobile {
+  :root {
+    --radius-big: 30px;
+  }
 }
