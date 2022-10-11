@@ -1,0 +1,55 @@
+.payment {
+  margin: 75px auto;
+  padding: 100px 0;
+
+  @include mobile {
+    margin: 35px auto;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  &--bg {
+    width: calc(100% - 80px);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-big);
+
+    @include mobile {
+      width: 328px;
+    }
+  }
+
+  &--rounded {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -200px;
+      left: -90px;
+      width: 716px;
+      height: 716px;
+      background: #fff;
+      background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 52.08%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0.2;
+      filter: blur(150px);
+      z-index: -1;
+
+      @include mobile {
+        top: 83px;
+        left: -55px;
+        right: -55px;
+        width: 436px;
+        height: 436px;
+        opacity: 0.3;
+        filter: blur(180px);
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__accardion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

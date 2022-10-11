@@ -209,7 +209,6 @@ iframe {
 	@include mobile {
 		margin-bottom: 40px;
 		font-size: 25px;
-		text-align: center;
 	}
 }
 
@@ -225,7 +224,6 @@ iframe {
 	}
 
 	@include mobile {
-		text-align: center;
 
 		&:not(:last-child) {
 			margin-bottom: 10px;
@@ -308,6 +306,7 @@ iframe {
 		font-weight: 400;
 		font-size: 25px;
 		line-height: 120%;
+		word-break: break-word;
 
 		&:not(:last-child) {
 			margin-bottom: 30px;

@@ -1,0 +1,10 @@
+mixin accardion(data, padding)
+  each accardion, key in data
+    .accardion__item.js-toggle
+      .accardion__header
+        .accardion__number
+          | 0#{key+1}
+        .accardion__title
+          span!=accardion.title
+          .accardion__toggle
+      .accardion__body(class=padding ? 'accardion__padding' : '')!=accardion.subtitle
