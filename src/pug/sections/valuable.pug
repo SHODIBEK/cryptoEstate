@@ -1,0 +1,44 @@
+section.valuable
+  .container
+    .valuable__wrapper.valuable--rounded
+      h2.valuable__title.title
+        | Самый ценный контакт на Кипре
+      .valuable__grid
+        .valuable__side
+          each slide in data.valuable.sides
+            .valuable__side-item
+              h3.valuable__side-title!=slide.title
+              p.valuable__side-subtitle!=slide.subtitle
+        .valuable__row
+          .valuable__item
+            .valuable__block.valuable__block--primary
+              .valuable__block-title
+                | SPM Real Estate
+              .valuable__block__subtitle
+                p
+                  | Сервис инвестиционной недвижимости SPM Real Estate поможет купить недвижимость на Кипре для жизни и инвестиций: от апартаментов до отелей
+              .valuable__block-btn
+                a.btn.btn-primary.valuable__btn(href="#")
+                  | перейти на сайт
+            .valuable__block.valuable__block--white
+              .valuable__block-title
+                | SPM Family Office
+              .valuable__block__subtitle
+                p
+                  | SPM Family Office — ваш партнер в жизни, бизнесе и инвестициях
+                p 
+                  | Полное юридическое сопровождение на Кипре: от открытия счета до релокации
+              .valuable__block-btn
+                a.btn.btn-primary.valuable__btn(href="#")
+                  | перейти на сайт
+          .valuable__item
+            .valuable__col
+              .valuable__name
+                | Доверенный игрок <br>на рынке с 2016 года
+              .valuable__desc
+                | Знает рынок и работает с лучшими объектами и проверенными застройщиками. Проведет за руку от начала сделки и до приобретения недвижимости на Кипре
+            .valuable__col
+              .valuable__name
+                | Лицензированный агент <br>с офисом на Кипре
+              .valuable__desc
+                | Получение ВНЖ и ПМЖ за инвестиции, открытие банковского счета, релокейт компании, налоговое планирование, адаптация семьи на острове
