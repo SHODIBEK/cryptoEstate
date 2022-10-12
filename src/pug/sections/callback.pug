@@ -1,0 +1,54 @@
+section.callback.callback--rounded
+  .container
+    .callback__row
+      form.callback__form
+        .callback__title  
+          | Свяжитесь с нами <br> для получения информации
+        .callback__groups
+          .form-group
+            input.form-group__input(type="text", name="name", placeholder="Ваше имя")
+          .form-group
+            input.form-group__input(type="text", name="phone", placeholder="Телефон")
+          .form-group
+            input.form-group__input(type="email", name="email", placeholder="E-mail")
+          .form-group
+            button.btn.btn-primary.callback__btn(type="submit")
+              | отправить
+        .callback__agree.agree
+          | Согласие с 
+          a.agree__link(href="#")
+            | политикой конфиденциальности
+        .callback__line
+        .callback__social
+          .callback__text
+            | Или напишите напрямую в месседжер
+          .callback__socials
+            each social in data.socials
+              a.btn.btn-social(
+                href="#",
+                title!=social.title
+                style=`--social-color: ${social.color}`
+              )!=social.name
+        .callback__author.for-mobile
+          .callback__author-image
+            img(src="./images/content/author.png", alt="", widht="100", height="99")
+          .callback__author-block
+            .callback__author-name
+              | Владимир Попелястый
+            .callback__author-post
+              | Эксперт по недвижимости
+      .callback__block.for-desktop
+        .callback__block-text
+          | Crypto Estate
+        .callback__block-author.author
+          img.author__image(
+            src="./images/content/author.png", 
+            alt=""
+            widht="408"
+            height="621"
+          )
+          .author__block
+            .author__name
+              | Владимир Попелястый
+            .author__post
+              | Эксперт по недвижимости
