@@ -217,6 +217,21 @@ iframe {
 	pointer-events: none;
 }
 
+.bg-full {
+	padding: 100px 0;
+	width: calc(100% - 60px);
+	max-width: 1540px;
+	margin: 0 auto;
+	background: #262E3B;
+	border-radius: var(--radius-big);
+	overflow: hidden;
+
+	@include mobile {
+		padding: 40px 0;
+		width: 328px;
+	}
+}
+
 .js-lazy-load:not(.is-loaded) {
 	max-height: 50vh;
 }

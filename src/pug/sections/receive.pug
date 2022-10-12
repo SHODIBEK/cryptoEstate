@@ -1,0 +1,23 @@
+section.receive.bg-full
+  .container
+    .receive__wrapper
+      h2.receive__title.receive__title
+        | Кто может получить ПМЖ на Кипре
+      .receive__slider
+        .swiper
+          .swiper-wrapper
+            each object, key in data.receives
+              .swiper-slide
+                .receive__slide
+                  .receive__header
+                    .receive__number
+                      | 0#{key+1}
+                  .receive__body
+                    .receive__name!=object.title
+                    .receive__subtitle!=object.subtitle
+        .swiper-scrollbar
+        .capability__navigation
+          .swiper-button-prev
+            +svg('chevron-left')
+          .swiper-button-next
+            +svg('chevron-right')

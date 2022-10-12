@@ -20,3 +20,25 @@ const swiper = new Swiper('.swiper.js-sliderInit', {
     }
   }
 });
+
+const receiveSwiper = new Swiper('.receive .swiper', {
+  modules: [Navigation, Scrollbar],
+  slidesPerView: '1.2',
+  grabCursor: true,
+  // loop: true,
+  spaceBetween: 17,
+  scrollbar: {
+    el: '.receive .swiper-scrollbar',
+    draggable: true,
+  },
+  navigation: {
+    nextEl: '.receive .swiper-button-next',
+    prevEl: '.receive .swiper-button-prev',
+  },
+  breakpoints: {
+    1024: {
+      spaceBetween: 30,
+      slidesPerView: '3.5',
+    }
+  }
+});
