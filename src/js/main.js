@@ -2,6 +2,7 @@ import './vendor';
 import './helpers';
 import './components/vimeo';
 import './components/accardion';
+import './components/headerFixed';
 import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';

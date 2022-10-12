@@ -1,1 +1,21 @@
-section.necessary
+section.necessary.necessary--rounded
+  .container
+    .section__grid
+      .section__col.flex-column.gap-0
+        h2.title
+          | Что необходимо для покупки недвижимости за криптовалюту
+        .necessary__detail.for-desktop
+          p
+            | Прочитайте подробнее об условиях получения ПМЖ за инвестиции в недвижимость 
+          a.btn.btn-primary.necessary__btn(href="#")
+            | прочитать
+      .necessary__col
+        each necessary in data.necessarys
+          .necessary__block
+            .necessary__title!=necessary.title
+            .necessary__subtitle!=necessary.subtitle
+        .necessary__detail.for-mobile
+          p
+            | Прочитайте подробнее об условиях получения ПМЖ за инвестиции в недвижимость 
+          a.btn.btn-primary.necessary__btn(href="#")
+            | прочитать

@@ -1,0 +1,151 @@
+.necessary {
+  padding: 75px 0;
+
+  @include mobile {
+    padding: 35px 0;
+  }
+
+  &--rounded {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -75px;
+      left: 0;
+      right: 0;
+      width: 814px;
+      height: 814px;
+      margin: auto;
+      background: rgba($color: $color-primary, $alpha: 0.23);
+      filter: blur(150px);
+    }
+  }
+
+  &__detail {
+    margin-top: 80px;
+    padding: 30px;
+    background-color: rgba($color: #fff, $alpha: 0.15);
+    border-radius: var(--radius-normal);
+
+    @include mobile {
+      margin-top: 40px;
+      padding: 25px 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p {
+      font-family: var(--secondary-font);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      color: #fff;
+
+      @include mobile {
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 50px;
+    min-width: 208px;
+
+    @include mobile {
+      margin-top: 10px;
+      min-width: 141px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    @include mobile {
+      gap: 25px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 1px;
+      height: 100%;
+      background-color: rgba($color: #E1E3E6, $alpha: 0.1);
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__block {
+    width: 50%;
+    flex: 0 0 50%;
+    padding-right: 88px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    border-top: 1px solid rgba($color: #E1E3E6, $alpha: 0.1);
+
+    @include desktop-sm {
+      padding-right: 30px;
+    }
+
+    @include mobile {
+      padding-top: 25px;
+      padding-right: 0;
+      padding-bottom: 0;
+      width: 100%;
+      flex: 0 0 100%;
+    }
+
+    @include desktop {
+      &:nth-child(1),
+      &:nth-child(2) {
+        padding-top: 0;
+        border: none;
+      }
+    }
+  }
+
+  &__title {
+    min-height: 60px;
+    font-size: 25px;
+    line-height: 120%;
+    color: #fff;
+
+    @include desktop-sm {
+      min-height: auto;
+    }
+
+    @include mobile {
+      min-height: auto;
+      font-size: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--grey-color);
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}
