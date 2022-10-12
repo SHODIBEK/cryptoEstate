@@ -20,6 +20,15 @@
       opacity: 0.2;
       filter: blur(150px);
       z-index: -1;
+
+      @include mobile {
+        margin: auto;
+        top: 340px;
+        left: -52px;
+        right: -52px;
+        width: 466px;
+        height: 466px;
+      }
     }
 
     &::before {
@@ -33,6 +42,13 @@
       opacity: 0.3;
       filter: blur(180px);
       z-index: -1;
+
+      @include mobile {
+        top: -55px;
+        right: -81px;
+        width: 358px;
+        height: 358px;
+      }
     }
   }
 
