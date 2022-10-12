@@ -1,18 +1,27 @@
-section.capability
+section.capability.capability--rounded
   .container
     h2.capability__title.title.text-sm-center
       | Возможности, которые открывает недвижимость на Кипре
-  .capability__slider
-    .swiper
-      .swiper-wrapper
-        each object in data.capability
-          .swiper-slide
-            .capability__slide
-              img.capability__image(
-                src=`${baseDir}images/content/${object.image}.png`, 
-                alt!=object.title
-                width="567",
-                height="250"
-              )
-              .capability__title!=object.title
-              .capability__subtitle!=object.subtitle
+    .capability__wrapper
+      .capability__slider
+        .swiper.js-sliderInit
+          .swiper-wrapper
+            each object in data.capability
+              .swiper-slide
+                .capability__slide
+                  .capability__header
+                    img.capability__image(
+                      src=`${baseDir}images/content/${object.image}.png`, 
+                      alt!=object.title
+                      width="567",
+                      height="250"
+                    )
+                  .capability__body
+                    .capability__name!=object.title
+                    .capability__subtitle!=object.subtitle
+      .swiper-scrollbar
+      .capability__navigation
+        .swiper-button-prev
+          +svg('chevron-left')
+        .swiper-button-next
+          +svg('chevron-right')

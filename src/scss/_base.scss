@@ -171,6 +171,52 @@ iframe {
 	}
 }
 
+.swiper-scrollbar {
+	margin-top: 70px;
+	position: unset!important;
+	background: var(--grey-color);
+	border-radius: 3px;
+
+	@include mobile {
+		margin-top: 30px;
+	}
+
+	&-drag {
+		background: #fff;
+		border-radius: 3px;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	width: 70px;
+	height: 70px;
+	background: var(--secondary-color);
+	box-shadow: 0px 24px 50px rgba(130, 71, 229, 0.2);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: var(--transition-normal);
+
+	@include hover {
+		background: #735A9C;
+	}
+
+	svg {
+		width: 40px;
+		height: 40px;
+		fill: none;
+	}
+}
+
+.swiper-button-disabled {
+	opacity: 0.5;
+	cursor: none;
+	pointer-events: none;
+}
+
 .js-lazy-load:not(.is-loaded) {
 	max-height: 50vh;
 }
