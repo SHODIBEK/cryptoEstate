@@ -64,3 +64,25 @@ const propertySwiper = new Swiper('.property .swiper', {
     }
   }
 });
+
+const faqSwiper = new Swiper('.faqs .swiper', {
+  modules: [Navigation, Scrollbar],
+  slidesPerView: '1.2',
+  grabCursor: true,
+  // loop: true,
+  spaceBetween: 17,
+  scrollbar: {
+    el: '.faqs .swiper-scrollbar',
+    draggable: true,
+  },
+  navigation: {
+    nextEl: '.faqs .swiper-button-next',
+    prevEl: '.faqs .swiper-button-prev',
+  },
+  breakpoints: {
+    1024: {
+      spaceBetween: 30,
+      slidesPerView: '3.5',
+    }
+  }
+});

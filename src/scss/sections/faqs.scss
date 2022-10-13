@@ -1,0 +1,112 @@
+.faqs {
+  margin: 75px auto;
+
+  @include mobile {
+    margin: 35px auto;
+  }
+
+  &--rounded {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -151px;
+      left: 0;
+      right: 0;
+      width: 736px;
+      height: 736px;
+      margin: auto;
+      background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0.3;
+      filter: blur(180px);
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 70px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      &:not(:last-child) {
+        margin-bottom: 70px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-normal);
+    overflow: hidden;
+
+    @include hover {
+      .faqs__image {
+        transform: scale(1.1);
+        transition: var(--transition-normal);
+      }
+    }
+
+    &--video {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include hover {
+        &::after {
+          transform: scale(0.8);
+          transition: var(--transition-normal);
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform-origin: center;
+        background: url('../images/sprites/svg/play-2.svg') no-repeat center;
+        transition: var(--transition-normal);
+        z-index: 2;
+
+        @include mobile {
+          width: 40px;
+          height: 40px;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: var(--transition-normal);
+  }
+}

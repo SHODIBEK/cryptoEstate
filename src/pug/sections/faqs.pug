@@ -1,0 +1,28 @@
+section.faqs.bg-full.faqs--rounded
+  .container
+    .faqs__wrapper
+      h2.title.faqs__title.text-center
+        | Часто задаваемые вопросы
+      .faqs__row
+        +accardion(data.faqs, false, false)
+      .faqs__block
+        h2.title.faqs__title.text-center
+          | YouTube-канал о недвижимости, бизнесе и инвестициях
+        .faqs__slider
+          .swiper
+            .swiper-wrapper
+              - for(var i = 0; i < 4; i++) {
+                .swiper-slide
+                  .faqs__slide
+                    a.faqs__link.faqs__link--video(
+                      href="https://vimeo.com/757537299?h=eea89e9c0e", 
+                      data-fancybox
+                    )
+                      img.faqs__image(
+                        src=`./images/content/faq-0${i+1}.png`,
+                        alt="Наименование канала"
+                        width="408"
+                        height="230"
+                      )
+              - }
+          .swiper-scrollbar

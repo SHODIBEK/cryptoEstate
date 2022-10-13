@@ -10,6 +10,12 @@ import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
 import header from './components/header';
 import scrollToAnchor from './modules/scrollToAnchor';
+import { Fancybox } from "@fancyapps/ui/src/Fancybox/Fancybox.js";
+import ru from "@fancyapps/ui/src/Fancybox/l10n/ru";
+
+Fancybox.bind("[data-fancybox]", {
+  l10n: ru,
+});
 
 ieFix();
 vhFix();
