@@ -5,6 +5,7 @@ import './components/accardion';
 import './components/headerFixed';
 import './components/closeCookie';
 import './components/sliders';
+import modal from './components/modal';
 import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
@@ -23,3 +24,4 @@ actualYear();
 scrollToAnchor.init();
 
 header.init();
+modal.init();

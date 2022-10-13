@@ -1,3 +1,4 @@
+// Services Start
 section.services.services--rounded
   .container
     h2.services__title.title.text-sm-center.for-mobile
@@ -21,7 +22,7 @@ section.services.services--rounded
                 | отправить
           .services__form-agree.agree
             | Согласие с 
-            a.agree__link(href="#")
+            a.agree__link.js-modal-open(href="#agree")
               | политикой конфиденциальности
       .services__col
         each object in data.services
@@ -32,3 +33,4 @@ section.services.services--rounded
               .services__name!=object.name
             .services__body
               p.services__text!=object.subtitle
+// Services End
