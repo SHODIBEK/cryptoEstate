@@ -42,3 +42,25 @@ const receiveSwiper = new Swiper('.receive .swiper', {
     }
   }
 });
+
+const propertySwiper = new Swiper('.property .swiper', {
+  modules: [Navigation, Scrollbar],
+  slidesPerView: '1.2',
+  grabCursor: true,
+  // loop: true,
+  spaceBetween: 17,
+  scrollbar: {
+    el: '.property .swiper-scrollbar',
+    draggable: true,
+  },
+  navigation: {
+    nextEl: '.property .swiper-button-next',
+    prevEl: '.property .swiper-button-prev',
+  },
+  breakpoints: {
+    1024: {
+      spaceBetween: 30,
+      slidesPerView: '3.5',
+    }
+  }
+});

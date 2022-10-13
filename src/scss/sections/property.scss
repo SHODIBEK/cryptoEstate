@@ -1,0 +1,129 @@
+.property {
+  padding: 75px 0;
+
+  @include mobile {
+    padding: 35px 0;
+  }
+
+  &--rounded {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -430px;
+      left: -322px;
+      width: 1156px;
+      height: 1156px;
+      background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0.3;
+      filter: blur(180px);
+      z-index: -1;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 300px;
+      right: -465px;
+      width: 1033px;
+      height: 1033px;
+      background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0.2;
+      filter: blur(180px);
+      z-index: -1;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 70px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__picture {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 0;
+    border-radius: var(--radius-normal);
+    overflow: hidden;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0 20px;
+    line-height: 40px;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--dark-color);
+    border-radius: var(--radius-big);
+    z-index: 2;
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 37px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 25px;
+    line-height: 120%;
+    color: #fff;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__price {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--grey-color);
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-left: 10px;
+    width: 21px;
+    height: auto;
+  }
+}

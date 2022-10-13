@@ -1,0 +1,29 @@
+section.property.property--rounded
+  .container
+    h2.property__title.title.text-center
+      | Недвижимость
+    .property__slider
+      .swiper
+        .swiper-wrapper
+          each object in data.property
+            .swiper-slide
+              .property__slide
+                .property__picture
+                  .property__tag!=object.tag
+                  img.property__image(
+                    src=`${baseDir}images/content/${object.image}.png`,
+                    alt="",
+                    width="408"
+                    height="408"
+                  )
+                .property__bottom
+                  .property__name!=object.title
+                  .property__price
+                    span От #{object.price}
+                    img.property__icon(
+                      src="./images/content/tether.svg", 
+                      alt="tether", 
+                      width="21", 
+                      height="18"
+                    )
+      .swiper-scrollbar
