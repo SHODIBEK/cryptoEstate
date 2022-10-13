@@ -54,6 +54,7 @@
 
   &__side {
     padding: 70px 30px;
+    height: max-content;
     background: rgba($color: #fff, $alpha: 0.15);
     border-radius: var(--radius-normal);
 

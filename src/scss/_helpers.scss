@@ -86,6 +86,25 @@
 	gap: 0!important;
 }
 
+.mt-md-5 {
+	@include desktop {
+		margin-top: 20px;
+	}
+}
+
+.mt-md-7 {
+	@include desktop {
+		margin-top: 30px;
+	}
+}
+
+.mt-md-13 {
+	@include desktop {
+		margin-top: 50px;
+	}
+}
+
+
 /* stylelint-disable */
 .dont-break-out {
 	// Технически это одно и то же, но используйте и то, и другое
