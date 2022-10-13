@@ -1,1 +1,34 @@
-section.services
+section.services.services--rounded
+  .container
+    h2.services__title.title.text-sm-center.for-mobile
+      | Дополнительные услуги после покупки недвижимости
+    .services__grid
+      .services__aside
+        h2.services__title.title.for-desktop
+          | Дополнительные услуги после покупки недвижимости
+        form.services__form
+          .services__form-title
+            | Свяжитесь с нами для получения информации
+          .services__form-groups
+            .form-group
+              input.form-group__input(type="text", name="name", placeholder="Ваше имя")
+            .form-group
+              input.form-group__input(type="text", name="phone", placeholder="Телефон")
+            .form-group
+              input.form-group__input(type="email", name="email", placeholder="E-mail")
+            .form-group
+              button.btn.btn-primary.callback__btn(type="submit")
+                | отправить
+          .services__form-agree.agree
+            | Согласие с 
+            a.agree__link(href="#")
+              | политикой конфиденциальности
+      .services__col
+        each object in data.services
+          .services__item
+            .services__header
+              .services__icon
+                +svg(object.icon).services__svg
+              .services__name!=object.name
+            .services__body
+              p.services__text!=object.subtitle
