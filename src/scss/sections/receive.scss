@@ -18,7 +18,15 @@
 
   &__slider {
     position: relative;
-    // margin-right: -10%;
+    
+    .swiper {
+      position: relative;
+      width: calc(100vw - var(--container-position) - 60px);
+
+      @include mobile {
+        width: calc(100% + 16px);
+      }
+    }
   }
 
   &__slide {
@@ -68,7 +76,7 @@
     font-size: 25px;
     line-height: 120%;
     color: var(--dark-color);
-    word-break: break-all;
+    word-break: break-word;
 
     @include mobile {
       margin-bottom: 15px;

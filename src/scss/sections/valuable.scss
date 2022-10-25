@@ -45,6 +45,11 @@
     grid-template-columns: 332px 1fr;
     gap: 106px;
 
+    @include desktop-sm {
+      grid-template-columns: 280px 1fr;
+      gap: 30px;
+    }
+
     @include mobile {
       display: flex;
       flex-direction: column;
@@ -83,6 +88,10 @@
       font-weight: 400;
       font-size: 30px;
       line-height: 120%;
+
+      @include desktop-sm {
+        font-size: 24px;
+      }
 
       @include mobile {
         margin-bottom: 15px;

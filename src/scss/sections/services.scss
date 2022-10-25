@@ -166,6 +166,10 @@
     gap: 30px;
     min-height: 60px;
 
+    @include desktop-sm {
+      gap: 20px;
+    }
+
     @include mobile {
       margin-bottom: 15px;
       flex-direction: column;
@@ -203,6 +207,11 @@
     font-size: 25px;
     line-height: 120%;
     color: #fff;
+    word-break: break-word;
+
+    @include desktop-sm {
+      font-size: 15px;
+    }
 
     @include mobile {
       font-size: 20px;

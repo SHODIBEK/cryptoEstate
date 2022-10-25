@@ -51,8 +51,16 @@
     }
   }
   
-  &__slide {
-    max-width: 408px;
+  &__slider {
+    .swiper {
+      width: calc(100vw - var(--container-position) - 16px);
+
+      &-slide {
+        @include mobile {
+          max-width: 300px!important;
+        }
+      }
+    }
   }
 
   &__picture {

@@ -1,6 +1,10 @@
 .hero {
-  padding-top: 249px;
+  padding-top: 140px;
   padding-bottom: 75px;
+
+  @include desktop-xl {
+    padding-top: 249px;
+  }
 
   @include mobile {
     padding-top: 176px;
@@ -53,11 +57,20 @@
     position: relative;
     padding-bottom: 145px;
     font-weight: 400;
-    font-size: 147px;
+    font-size: 128px;
     // @include css-lock(37, 147, 1023, 1284);
-    line-height: 110%;
+    line-height: 100%;
     color: #fff;
     text-align: center;
+
+    .text-primary {
+      display: block;
+    }
+
+    @include desktop-xl {
+      font-size: 147px;
+      line-height: 110%;
+    }
 
     @include desktop-sm {
       font-size: 105px;
@@ -71,11 +84,17 @@
 
   &__desc {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 89px;
+    bottom: 6px;
     display: inline-block;
-    font-size: 64px;
+    font-size: 48px;
     line-height: 89%;
+
+    @include desktop-xl {
+      right: 0;
+      bottom: 0;
+      font-size: 64px;
+    }
 
     @include desktop-sm {
       font-size: 50px;
@@ -99,10 +118,14 @@
   }
 
   &__block {
-    padding-top: 100px;
-    padding-left: 150px;
-    padding-right: 50px;
+    padding-top: 24px;
+    padding-left: 56px;
+    padding-right: 35px;
     font-family: var(--secondary-font);
+
+    @include desktop-xl {
+      padding-left: 100px;
+    }
 
     @include mobile {
       padding: 0;
@@ -112,7 +135,7 @@
 
     p {
       font-weight: 500;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 150%;
 
       @include mobile {
@@ -121,7 +144,7 @@
     }
 
     .btn {
-      margin-top: 50px;
+      margin-top: 12px;
       min-width: 272px;
 
       @include mobile {
@@ -133,11 +156,20 @@
     }
   }
 
+  &__text {
+    display: flex;
+    gap: 50px;
+  }
+
   &__images {
     position: relative;
-    margin-left: 110px;
+    margin-left: 151px;
     width: max-content;
-    height: 574px;
+    height: auto;
+
+    @include desktop-xl {
+      margin-left: 110px;
+    }
 
     @include desktop-sm {
       margin-left: 20px;
@@ -152,9 +184,14 @@
 
   &__iphone {
     display: block;
-    margin-top: -190px;
+    margin-top: -113px;
     max-width: 100%;
-    width: max-content;
+    width: 347px;
+
+    @include desktop-xl {
+      margin-top: -190px;
+      width: max-content;
+    }
 
     @include mobile {
       width: 235px;
@@ -164,10 +201,18 @@
 
   &__tether {
     position: absolute;
-    top: -130px;
-    left: 0;
+    top: -75px;
+    left: 3px;
+    width: 59px;
     box-shadow: 0px 24px 50px rgba(80, 175, 149, 0.2);
-    border-radius: 20px;
+    border-radius: 16.4602px;
+
+    @include desktop-xl {
+      top: -130px;
+      left: 0;
+      width: 71px;
+      border-radius: 20px;
+    }
 
     @include mobile {
       top: 35px;
@@ -180,10 +225,17 @@
 
   &__bitcoin {
     position: absolute;
-    top: -60px;
-    right: -15px;
+    top: 0px;
+    right: -8px;
+    width: 82px;
     box-shadow: 0px 4px 50px rgba(247, 147, 26, 0.6);
     border-radius: 30px;
+
+    @include desktop-xl {
+      top: -60px;
+      right: -15px;
+      width: 100px;
+    }
 
     @include mobile {
       top: 70px;
@@ -212,8 +264,13 @@
 
   &__grafik {
     position: absolute;
-    top: 21%;
-    right: -160px;
+    top: 27%;
+    right: -141px;
+
+    @include desktop-xl {
+      top: 21%;
+      right: -160px;
+    }
 
     @include mobile {
       top: 55%;

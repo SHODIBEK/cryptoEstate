@@ -25,3 +25,21 @@ scrollToAnchor.init();
 
 header.init();
 modal.init();
+
+const calcContainer = () => {
+  const container = $('.container');
+  let containerLeft = container.offset().left;
+
+  console.log(containerLeft)
+
+  return containerLeft
+}
+
+const addBodyVar = () => {
+  $('body').css('--container-position', `${calcContainer()}px`)
+}
+
+addBodyVar()
+$(window).resize(function() {
+  addBodyVar();
+});

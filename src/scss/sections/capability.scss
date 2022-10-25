@@ -68,7 +68,7 @@
 
   &__slider {
     position: relative;
-    width: 100vw;
+    width: calc(100vw - var(--container-position));
   }
 
   .swiper-slide {

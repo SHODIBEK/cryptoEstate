@@ -136,6 +136,7 @@ iframe {
 	&-primary {
 		padding: 0 32px;
 		width: max-content;
+		font-family: var(--primary-font);
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 70px;
@@ -219,7 +220,6 @@ iframe {
 .bg-full {
 	padding: 100px 0;
 	width: calc(100% - 60px);
-	max-width: 1540px;
 	margin: 0 auto;
 	background: #262E3B;
 	border-radius: var(--radius-big);
@@ -258,9 +258,13 @@ iframe {
 }
 
 .text--bg {
-	padding: 30px;
+	padding: 31px 28px;
 	background-color: rgba($color: #fff, $alpha: 0.15);
 	border-radius: 30px;
+
+	@include desktop-xl {
+		padding: 30px;
+	}
 
 	@include mobile {
 		padding: 20px;

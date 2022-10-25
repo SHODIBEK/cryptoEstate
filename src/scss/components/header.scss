@@ -21,16 +21,16 @@
   }
 
   &__wrapper {
-    padding: 50px 0;
     position: relative;
+    padding: 23px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgba($color: #E1E3E6, $alpha: 0.1);
     transition: var(--transition-normal);
 
-    @include mobile {
-      padding: 30px 0;
+    @include desktop-xl {
+      padding: 50px 0;
     }
   }
 
@@ -46,6 +46,7 @@
   }
 
   &__burger {
+    margin-left: -24px;
     padding: 10px 17px;
     height: 50px;
     font-size: 14px;
@@ -180,7 +181,7 @@
   }
   
   &__info {
-    margin-left: 30px;
+    margin-left: 34px;
 
     @include mobile {
       display: none;
@@ -428,7 +429,7 @@
   align-items: center;
   &__text {
     display: inline-block;
-    margin-right: 12px;
+    margin-right: 20px;
     font-size: 26px;
     line-height: 117%;
     transition: var(--transition-normal);
