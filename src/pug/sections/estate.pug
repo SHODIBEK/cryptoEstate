@@ -5,7 +5,7 @@ section.estate.estate--rounded
       .estate__col.section__col.flex-column.gap-0
         h2.mt-md-5.title.text-sm-center
           | Недвижимость за криптовалюту
-      .estate__col.section__col
+      .estate__col.estate__slide.section__col
         each estate, key in data.estates
           .estate__card.card(class=key == 0 ? 'card--primary' : 'card--secondary')
             .card__header

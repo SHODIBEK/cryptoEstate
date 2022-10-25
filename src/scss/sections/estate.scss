@@ -33,4 +33,10 @@
       }
     }
   }
+
+  &__slide {
+    @include mobile {
+      width: calc(100vw - var(--container-position) - 16px);
+    }
+  }
 }

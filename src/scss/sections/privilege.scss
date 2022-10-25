@@ -52,4 +52,10 @@
   &__subtitle {
     color: var(--grey-color);
   }
+
+  &__slide {
+    @include mobile {
+      width: calc(100vw - var(--container-position) - 16px);
+    }
+  }
 }
