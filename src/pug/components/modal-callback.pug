@@ -1,0 +1,20 @@
+.modal#callback
+  .modal__block.modal__block--purple
+    .modal__close.modal__close--upper.modal__close--white.js-modal-close
+    .modal__body
+      h2.modal__title.text-center
+        | Введите свои данные,<br> и мы свяжемся с вами <br>в ближайшее время
+      form.modal__form
+        .form-group
+          input.form-group__input.modal__input(type="text", name="name", placeholder="Ваше имя")
+        .form-group
+          input.form-group__input.modal__input(type="text", name="phone", placeholder="Телефон")
+        .form-group
+          input.form-group__input.modal__input(type="email", name="email", placeholder="E-mail")
+        .form-group
+          button.btn.btn-primary(type="submit")
+            | отправить заявку
+      .modal__agree.agree
+        | Согласие с 
+        a.agree__link.js-modal-open(href="#agree")
+          | политикой конфиденциальности

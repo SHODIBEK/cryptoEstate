@@ -49,11 +49,26 @@
     &::before {
       transform: rotate(-45deg);
     }
+
+    &--upper {
+      @include desktop {
+        top: -50px;
+        right: -50px;
+      }
+    }
+
+    &--white {
+      &::after,
+      &::before {
+        background-color: #fff;
+      }
+    }
   }
 
   &__block {
     max-width: 1282px;
     max-height: 90%;
+    width: max-content;
     background: #fff;
     border-radius: var(--radius-big);
     position: absolute;
@@ -62,6 +77,21 @@
     overflow-x: hidden;
     overflow-y: auto;
     transform: translate(-50%,-50%);
+
+    &--purple {
+      max-width: 703px;
+      background: #BEC6D6;
+
+      @include desktop {
+        overflow: unset;
+      }
+
+      .modal__body {
+        @include desktop {
+          padding: 70px 94px;
+        }
+      }
+    }
 
     @include desktop-sm {
       max-width: 90%;
@@ -91,8 +121,35 @@
     color: var(--dark-color);
 
     @include mobile {
-      
       padding: 50px 20px;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &__input {
+    font-size: 16px;
+    color: var(--dark-color);
+  }
+
+  &__agree {
+    margin-top: 10px;
+    text-align: right;
+
+    @include mobile {
+      text-align: center;
     }
   }
 
