@@ -19,6 +19,8 @@
       background: rgba($color: #BFB5FF, $alpha: 0.23);
       filter: blur(150px);
       z-index: -1;
+      transform: translate3d(0, 0, 0);
+
     }
 
     &::before {
@@ -33,6 +35,8 @@
       opacity: 0.3;
       filter: blur(180px);
       z-index: -1;
+      transform: translate3d(0, 0, 0);
+
     }
   }
 

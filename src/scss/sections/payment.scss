@@ -32,6 +32,7 @@
       background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 52.08%, rgba(255, 255, 255, 0) 100%);
       opacity: 0.2;
       filter: blur(150px);
+      transform: translate3d(0, 0, 0);
       z-index: -1;
 
       @include mobile {

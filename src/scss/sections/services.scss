@@ -19,6 +19,7 @@
       margin: 0 auto;
       background: rgba($color: #7CC59E, $alpha: 0.16);
       filter: blur(150px);
+      transform: translate3d(0, 0, 0);
       z-index: -1;
 
       @include mobile {
@@ -38,6 +39,7 @@
       background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
       opacity: 0.3;
       filter: blur(180px);
+      transform: translate3d(0, 0, 0);
       z-index: -1;
 
       @include mobile {

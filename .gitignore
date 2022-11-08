@@ -9,6 +9,7 @@ dist/
 bower_components/
 build/
 zip/
+.husky/
 
 # Compiled Java class files
 *.class

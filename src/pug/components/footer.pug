@@ -9,11 +9,7 @@ footer.footer
           .footer__logo.logo(href=data.header.links.logo)
             span.logo__text
               | Crypto <br> Estate
-            img.logo__image(src="./logo.png",
-              alt="logo",
-              width="50"
-              height="50"
-            )
+            img.logo__image(src="./logo.png" alt="logo" width="50" height="50")
         .footer__block
           .footer__col
             .footer__text
@@ -21,9 +17,10 @@ footer.footer
             .footer__info
               a.footer__phone(href=`tel:${data.phone}`)
                 | +357 96 787 657
-              a.footer__callback(href=`mailto:${data.mail}`)!=data.mail
+              a.footer__callback(href=`mailto:${data.mail}`)
+                | #{data.mail}
       .footer__bottom
-        a.footer__link(href="#policy")
+        a.footer__link.js-modal-open(href="#agree")
           | Политика конфиденциальности
         a.footer__link(href="#cookie")
           | Использование cookie

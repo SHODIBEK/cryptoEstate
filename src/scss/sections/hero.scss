@@ -24,6 +24,7 @@
       background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 52.08%, rgba(255, 255, 255, 0) 100%);
       opacity: 0.4;
       filter: blur(150px);
+      transform: translate3d(0, 0, 0);
 
       @include mobile {
         top: -113px;
@@ -42,6 +43,7 @@
       height: 1036px;
       background: rgba($color: #7CC59E, $alpha: 0.3);
       filter: blur(150px);
+      transform: translate3d(0, 0, 0);
 
       @include mobile {
         top: 525px;

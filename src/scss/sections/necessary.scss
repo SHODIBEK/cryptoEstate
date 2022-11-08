@@ -19,6 +19,7 @@
       margin: auto;
       background: rgba($color: $color-primary, $alpha: 0.23);
       filter: blur(150px);
+      transform: translate3d(0, 0, 0);
     }
   }
 
